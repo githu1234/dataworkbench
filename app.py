@@ -134,8 +134,13 @@ def main() -> None:
     st.markdown("""
     <style>
     .stApp { background: #f5f7fb; }
-    h1, h2, h3 { letter-spacing: -0.035em; }
-    h1 { color: #17243a; }
+    h1, h2, h3, h4 { letter-spacing: -0.035em; }
+    [data-testid="stMain"] h1,
+    [data-testid="stMain"] h2,
+    [data-testid="stMain"] h3,
+    [data-testid="stMain"] h4,
+    [data-testid="stMain"] [data-heading-text] { color: #17243a !important; }
+    [data-testid="stMain"] p { color: #728099; }
     [data-testid="stSidebar"] { background: #101a2c; }
     [data-testid="stSidebar"] * { color: #e5ebf5; }
     [data-testid="stMetric"] { background: white; border: 1px solid #e7ebf3; padding: 16px 18px; border-radius: 14px; }
@@ -325,6 +330,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 
